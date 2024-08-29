@@ -4,7 +4,6 @@
 #include <sstream>
 #include <limits>
 
-// ONLY MAKE CHANGES WHERE THERE IS A TODO
 
 // These using declarations let us refer to things more simply
 // e.g. instead of "std::cin" we can just write "cin"
@@ -25,7 +24,6 @@ void print_results(double exam_average,
                    double weighted_total,
                    char final_letter_grade);
 
-// YOU ARE NOT EXPECTED TO UNDERSTAND THIS ONE... YET
 // extract the category and score from the line
 // and store the values in the provided variables
 // if line := "exam 95", then category := "exam" and score := 95
@@ -37,9 +35,8 @@ void get_category_and_score(const string& line,
 int main() {
     print_instructions();
 
-    // ONLY MAKE CHANGES WHERE THERE IS A TODO
 
-    // TODO(student): declare and initialize variables that you want
+    // declare and initialize variables needed
     double exam_sum = 0.0;
     double final_exam = 0.0;
     int total_exam = 0;
@@ -87,7 +84,7 @@ int main() {
         getline(cin, line);
     }
 
-    // TODO(student): compute component averages
+    // compute component averages
     double exam_average = 0.0;
     double hw_average = 0.0;
     double lw_average = 0.0;
@@ -125,10 +122,10 @@ int main() {
     }
 
 
-    // TODO(student): compute weighted total of components
+    // compute weighted total of components
     double weighted_total = (exam_average*0.4)+(hw_average*0.4)+(lw_average*0.1)+(reading*0.05)+(engagement*0.05);
 
-    // TODO(student): compute final letter grade
+    // compute final letter grade
     char final_letter_grade = 'X';
     if (weighted_total >= 90){
         final_letter_grade = 'A';
@@ -148,8 +145,6 @@ int main() {
         weighted_total, final_letter_grade);
 }
 
-// These methods are already implemented for you
-// You should not need to modify them
 
 void print_instructions() {
     cout << "enter grades as <category> <score>" << endl;
